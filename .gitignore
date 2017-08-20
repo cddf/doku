@@ -25,6 +25,8 @@
 
 ### gitignore C++
 
+*.pro.user
+
 # Prerequisites
 *.d
 
