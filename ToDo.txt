@@ -1,7 +1,7 @@
 //Tag 1
 
 Beschluss gefasst, das Projekt anzugehen.
-Arbeitsaufwand: unklar.
+Arbeitsaufwand: groß.
 Ziel: die beste Dokumentationsdatei für Sozialberufe in Deutschland zu entwickeln.
 Und nichts geringeres! :)
 
