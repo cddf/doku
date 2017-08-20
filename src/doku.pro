@@ -13,9 +13,17 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    db/dbwrapper.cpp \
+    personen/person.cpp \
+    personen/klient.cpp \
+    personen/mitarbeiter.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    db/dbwrapper.h \
+    personen/person.h \
+    personen/klient.h \
+    personen/mitarbeiter.h
 
 FORMS    += mainwindow.ui
 

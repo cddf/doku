@@ -1,6 +1,6 @@
 #include "mitarbeiter.h"
 
-Mitarbeiter::Mitarbeiter()
+Mitarbeiter::Mitarbeiter(std::string vorname, std::string nachname) : Person(vorname, nachname)
 {
 
 }
