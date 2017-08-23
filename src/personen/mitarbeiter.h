@@ -6,7 +6,7 @@
 class Mitarbeiter : public Person
 {
 public:
-  Mitarbeiter(std::string vorname, std::string nachname);
+  Mitarbeiter(int id, std::string vorname, std::string nachname);
 };
 
 #endif // MITARBEITER_H

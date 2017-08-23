@@ -6,7 +6,7 @@
 class Klient : public Person
 {
 public:
-  Klient(std::string vorname, std::string nachname);
+  Klient(int id, std::string vorname, std::string nachname);
 };
 
 #endif // KLIENT_H
