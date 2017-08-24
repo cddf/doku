@@ -17,13 +17,17 @@ SOURCES += main.cpp\
     db/dbwrapper.cpp \
     personen/person.cpp \
     personen/klient.cpp \
-    personen/mitarbeiter.cpp
+    personen/mitarbeiter.cpp \
+    doku/doku.cpp \
+    modul.cpp
 
 HEADERS  += mainwindow.h \
     db/dbwrapper.h \
     personen/person.h \
     personen/klient.h \
-    personen/mitarbeiter.h
+    personen/mitarbeiter.h \
+    doku/doku.h \
+    module.h
 
 FORMS    += mainwindow.ui
 
