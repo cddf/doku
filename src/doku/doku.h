@@ -29,6 +29,8 @@ private:
 };
 
 // TODO wesentliche Frage: in welchem Umfang sollen Einträge geändert oder gelöscht werden können?
+// Antwort: Nur vom selben Mitarbeiter und nur mit einer Ablaufzeit von x Stunden. Vielleicht 48 Stunden oder einer Woche für z.B. Ergänzungen.
+// Und die Änderungen müssen nachvollziehbar sein (z.B. wie hier in GitHub).
 
 
 #endif // DOKU_H
