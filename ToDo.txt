@@ -16,6 +16,9 @@ Und nichts geringeres! :)
 * Doku Änderungen (Allgemein)
 * GUI
 * Archiv
+* Stammdaten alle in eine Datei? Alternativ eine redundante Liste? Oder die Ordnerstruktur scannen?
+* Struktur der ID
+* Zusätzlicher Speicherort für IHP-Datenbank?
 
 * (Teams)
 * (Zugriffsrechte)
