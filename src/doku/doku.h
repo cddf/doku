@@ -22,7 +22,7 @@ public:
     time_t timestamp;
   };
 
-  void newEintrag (eintrag eintr);
+  void newEintrag (eintrag &eintr);
 
 private:
   vector<eintrag> _eintraege; // dynamisch erweiterbares Array der Einträge

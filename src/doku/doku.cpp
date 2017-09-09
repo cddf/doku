@@ -5,9 +5,8 @@ Doku::Doku()
 
 }
 
-/*
-void newEintrag (eintrag &eintr)
+void Doku::newEintrag (Doku::eintrag &eintr)
 {
   // TODO Eintrag in der DB speichern
+
 }
-*/

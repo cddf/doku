@@ -4,6 +4,10 @@
 #include <string>
 #include <ctime>
 
+#include "dateihandling.h"
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
+
 using namespace std;
 
 class Person
@@ -25,13 +29,13 @@ public:
    * @param vorname Vorname
    * @param nachname Nachname
    */
-  Person(int id, string vorname, string nachname);
+  Person(string id, string vorname, string nachname);
   ~Person();
 
   /*
    * Getter
    */
-  int getID();
+  string getId();
   string getVorname();
   string getNachname();
   adresse getAdresse1();
@@ -40,17 +44,35 @@ public:
   /*
    * Setter
    */
+  void setId(string id);
   void setVorname(string vorname);
   void setNachname(string nachname);
   void setAdresse1(adresse adresse1);
 
 
 private:
-  const int _id;
+  string _id;
   string _vorname;
   string _nachname;
   //date _geburtsdatum; //TODO Welcher Datentyp ist geeignet
   adresse _adresse1;
+
+
+
+  /*
+   *  Serialisierung des Objekts für Boost
+   */
+  friend class boost::serialization::access;
+  // When the class Archive corresponds to an output archive, the
+  // & operator is defined similar to <<. Likewise, when the class Archive
+  // is a type of input archive the & operator is defined similar to >>.
+  template<class Archive>
+  void serialize(Archive & ar, const unsigned int version)
+  {
+    ar & _vorname;
+    ar & _nachname;
+    ar & _adresse1;
+  }
 
 };
 

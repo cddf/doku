@@ -6,3 +6,17 @@ Ziel: die beste Dokumentationsdatei für Sozialberufe in Deutschland zu entwickel
 Und nichts geringeres! :)
 
 "Heute gelacht, morgen gemacht."
+
+
+* Testinfrastruktur
+* Dateistruktur
+* XML schreiben/lesen
+* IHP (Individuelle Hilfeplanung)
+* Namensänderung
+* Doku Änderungen (Allgemein)
+* GUI
+* Archiv
+
+* (Teams)
+* (Zugriffsrechte)
+* (Klientenansicht)
