@@ -1,0 +1,29 @@
+<!-- 
+Hilfeplan
+Bereiche:
+    Wohnen
+    Arbeit und Beschäftigung
+    Freizeit
+    soziale Beziehungen
+    weitere
+-->
+<hilfeplan>
+    <leitziel></leitziel>
+    <plan>
+        <datum></datum>
+        <eintrag>
+            <lebensbereich></lebensbereich>
+            <zielbeschreibung></zielbeschreibung>
+            <methodik></methodik>
+            <zielindikator></zielindikator>
+            <erledigtBis></erledigtBis>
+            <erledigt></erledigt>
+            <mitarbeiter></mitarbeiter>
+            <doku>
+                Dokuzeile
+            </doku>
+        </eintrag>
+        <auswertung>
+        </auswertung>
+    </plan>
+</hilfeplan>
