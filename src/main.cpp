@@ -10,6 +10,9 @@
 int main()
 {
   /*
+   * Hauptfenster öffnen
+   */
+  /*
   QApplication a(argc, argv);
   MainWindow w;
   w.show();
@@ -17,12 +20,16 @@ int main()
   return a.exec();
   */
 
+
+  /*
+   * Testbereich Konsole
+   */
+
+
   Person p("Max", "Mümmel");
 
   //DateiHandling.objektSpeichern(p, "person.doku");
 
-  std::ofstream ofs("person");
-  boost::archive::text_oarchive oa(ofs);
   //oa << p;
 
   //std::ifstream ifs("person");
