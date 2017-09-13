@@ -4,7 +4,7 @@
 #include <QDate>
 #include <QString>
 
-#include "dateihandling.h"
+//#include "daten/dateihandling.h"
 
 using namespace std;
 
@@ -21,7 +21,6 @@ public:
   };
 
 
-
   /*
    * Bekannte Person wird mit der ID referenziert und automatisch geladen.
    */
@@ -31,6 +30,8 @@ public:
    * Neue Person wird erstellt und bekommt eine eindeutige ID zugewiesen.
    */
   Person(QString vorname, QString nachname, QDate geburtsdatum);
+
+  Person();
 
 
   ~Person();
@@ -42,14 +43,6 @@ public:
   const QString getVorname();
   const QString getNachname();
   const adresse getAdresse1();
-
-
-  /*
-   * Setter
-   */
-  void setVorname(QString vorname);
-  void setNachname(QString nachname);
-  void setAdresse1(adresse adresse);
 
 
 protected:
@@ -65,6 +58,9 @@ protected:
    * TODO Eindeutigkeit überprüfen
    */
   void erstelleID();
+
+  void ladePerson();
+  void speicherePerson();
 };
 
 

@@ -22,13 +22,10 @@ SOURCES += main.cpp\
     daten/dateihandling.cpp
 
 HEADERS  += mainwindow.h \
-    db/dbwrapper.h \
     personen/person.h \
     personen/klient.h \
     personen/mitarbeiter.h \
     doku/doku.h \
-    module.h \
-    dateihandling.h \
     daten/dateihandling.h
 
 FORMS    += mainwindow.ui

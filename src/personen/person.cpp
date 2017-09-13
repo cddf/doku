@@ -1,6 +1,10 @@
 #include "person.h"
 
 #include <QString>
+#include <QTextStream>
+#include <iostream>
+#include <string>
+#include <QDate>
 
 Person::Person(QString ID)
   : _ID(ID)
@@ -8,11 +12,12 @@ Person::Person(QString ID)
 }
 
 Person::Person(QString vorname, QString nachname, QDate geburtsdatum)
-  : _vorname(vorname), _nachname(nachname), _geburtsdatum(geburtsdatum)
+  : _vorname(vorname),
+    _nachname(nachname),
+    _geburtsdatum(geburtsdatum)
 {
   erstelleID();
 }
-
 
 Person::~Person()
 {
@@ -51,22 +56,4 @@ const QString Person::getNachname()
 const Person::adresse Person::getAdresse1()
 {
   return _adresse1;
-}
-
-/*
- * Setter
- */
-void Person::setVorname(QString vorname)
-{
-  _vorname = vorname;
-}
-
-void Person::setNachname(QString nachname)
-{
-  _nachname = nachname;
-}
-
-void Person::setAdresse1(Person::adresse adresse)
-{
-  _adresse1 = adresse;
 }
