@@ -13,6 +13,8 @@ public:
   Klient(QString vorname, QString nachname, QDate geburtsdatum);
 
   ~Klient();
+
+  void ladeKlient();
 };
 
 #endif // KLIENT_H

@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <QDate>
+#include "klient.h"
 
 Person::Person(QString ID)
   : _ID(ID)
@@ -17,6 +18,10 @@ Person::Person(QString vorname, QString nachname, QDate geburtsdatum)
     _geburtsdatum(geburtsdatum)
 {
   erstelleID();
+}
+
+Person::Person()
+{
 }
 
 Person::~Person()
@@ -38,6 +43,7 @@ void Person::erstelleID()
 }
 
 
+
 /*
  * Getter
  */
@@ -56,4 +62,8 @@ const QString Person::getNachname()
 const Person::adresse Person::getAdresse1()
 {
   return _adresse1;
+}
+const QDate Person::getGeburtsdatum()
+{
+  return _geburtsdatum;
 }

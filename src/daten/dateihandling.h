@@ -2,11 +2,18 @@
 #define DATEIHANDLING_H
 
 #include <vector>
+#include <iostream>
+#include <QString>
+//#include "pugixml.hpp"
+#include <QFile>
+#include <QDir>
 
+/*
 #include "personen/person.h"
 #include "personen/mitarbeiter.h"
 #include "personen/klient.h"
 #include "doku/doku.h"
+*/
 
 
 
@@ -26,22 +33,21 @@ public:
   /*
    * Personen
    */
-  void personAnlegen(Person p);
-  void personAendern(Person p);
-
-  vector<Klient> KlientenLaden();
-  vector<Mitarbeiter> MitarbeiterLaden();
+  QString ladeFeldKlient(QString ID, QString feld);
+  QString ladeFeldMitarbeiter(QString ID, QString feld);
 
   /*
    * Dokumentation
    */
-  //vector<eintrag> dokuLaden(Klient k);
-  //void dokuSpeichern(Klient k, vector<eintrag> d);
-
 
   /*
    * Hilfepläne
    */
+
+
+private:
+  QString ladeFeldPerson(QString person, QString ID, QString feld);
+  QString _pfadDaten = "../testdaten";
 
 };
 

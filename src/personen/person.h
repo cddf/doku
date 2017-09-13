@@ -4,7 +4,7 @@
 #include <QDate>
 #include <QString>
 
-//#include "daten/dateihandling.h"
+#include "daten/dateihandling.h"
 
 using namespace std;
 
@@ -33,7 +33,6 @@ public:
 
   Person();
 
-
   ~Person();
 
   /*
@@ -43,6 +42,7 @@ public:
   const QString getVorname();
   const QString getNachname();
   const adresse getAdresse1();
+  const QDate getGeburtsdatum();
 
 
 protected:
@@ -58,9 +58,6 @@ protected:
    * TODO Eindeutigkeit überprüfen
    */
   void erstelleID();
-
-  void ladePerson();
-  void speicherePerson();
 };
 
 

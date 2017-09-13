@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<klient id="mustereck1960">
+    <vorname>Eckbert</vorname>
+    <nachname>Muster</nachname>
+    <adresse>
+        <zeile2>c/o Schwanenhals</zeile2>
+        <strasse>Testweg 13</strasse>
+        <plz>49182</plz>
+        <ort>Hinterdupfingen</ort>
+        <land>Deutschland</land>
+        <kommentar>Hauptadresse</kommentar>
+    </adresse>
+    <geburtsdatum>1960-04-13</geburtsdatum>
+</klient>
