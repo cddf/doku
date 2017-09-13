@@ -1,12 +1,17 @@
 #ifndef MITARBEITER_H
 #define MITARBEITER_H
 
+#include <QDate>
+#include <QString>
+
 #include "person.h"
 
 class Mitarbeiter : public Person
 {
 public:
-  Mitarbeiter(std::string vorname, std::string nachname);
+  Mitarbeiter(QString ID);
+  Mitarbeiter(QString vorname, QString nachname, QDate geburtsdatum);
+
 };
 
 #endif // MITARBEITER_H

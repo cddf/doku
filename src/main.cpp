@@ -1,10 +1,10 @@
 #include "mainwindow.h"
 #include <QApplication>
 
+#include <QString>
+#include <QDate>
 #include "personen/person.h"
-#include <boost/archive/text_oarchive.hpp>
-#include <boost/archive/text_iarchive.hpp>
-#include <fstream>
+#include <iostream>
 
 //int main(int argc, char *argv[])
 int main()
@@ -20,21 +20,12 @@ int main()
   return a.exec();
   */
 
-
   /*
    * Testbereich Konsole
    */
 
-
-  Person p("Max", "Mümmel");
-
-  //DateiHandling.objektSpeichern(p, "person.doku");
-
-  //oa << p;
-
-  //std::ifstream ifs("person");
-  //boost::archive::text_iarchive ia(ifs);
-  //ia >> p;
-
+  QDate geb(1960,8,18);
+  Person p("Cøüfjekłn", "ÄuÄÖß-QuaRx", geb);
+  std::cout << "ID: " << p.getID().toStdString() << std::endl;
   return 0;
 }

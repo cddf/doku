@@ -1,8 +1,8 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include <string>
-#include <ctime>
+#include <QDate>
+#include <QString>
 
 #include "dateihandling.h"
 
@@ -12,50 +12,60 @@ class Person
 {
 public:
   struct adresse {
-    string zeile2;
-    string strasse;
+    QString zeile2;
+    QString strasse;
     ushort plz;
-    string ort;
-    string land;
-    string kommentar;
+    QString ort;
+    QString land;
+    QString kommentar;
   };
 
 
 
   /*
-   * @param id ID
-   * @param vorname Vorname
-   * @param nachname Nachname
+   * Bekannte Person wird mit der ID referenziert und automatisch geladen.
    */
-  Person(string id, string vorname, string nachname);
+  Person(QString ID);
+
+  /*
+   * Neue Person wird erstellt und bekommt eine eindeutige ID zugewiesen.
+   */
+  Person(QString vorname, QString nachname, QDate geburtsdatum);
+
+
   ~Person();
 
   /*
    * Getter
    */
-  string getId();
-  string getVorname();
-  string getNachname();
-  adresse getAdresse1();
+  const QString getID();
+  const QString getVorname();
+  const QString getNachname();
+  const adresse getAdresse1();
 
 
   /*
    * Setter
    */
-  void setId(string id);
-  void setVorname(string vorname);
-  void setNachname(string nachname);
-  void setAdresse1(adresse adresse1);
+  void setVorname(QString vorname);
+  void setNachname(QString nachname);
+  void setAdresse1(adresse adresse);
 
 
-private:
-  string _id;
-  string _vorname;
-  string _nachname;
-  //date _geburtsdatum; //TODO Welcher Datentyp ist geeignet
+protected:
+  QString _ID;
+  QString _vorname;
+  QString _nachname;
+  QDate _geburtsdatum;
   adresse _adresse1;
 
-
+  /*
+   * Erstellt und speichert die ID der Person.
+   *
+   * TODO Eindeutigkeit überprüfen
+   */
+  void erstelleID();
+};
 
 
 #endif // PERSON_H

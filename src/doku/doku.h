@@ -7,25 +7,33 @@
 #include "modul.h"
 #include "personen/person.h"
 #include "personen/mitarbeiter.h"
+#include "personen/klient.h"
 
 using namespace std;
 
 class Doku : public Modul
 {
 public:
+  //Doku(Klient k, Mitarbeiter m);
   Doku();
 
+  void newEintrag (string kommentar);
+
+private:
   struct eintrag {
     //ctime zeit; // TODO Datentyp?
     Mitarbeiter mitarbeiter;
     string kommentar;
     time_t timestamp;
+    // TODO Revisionen integrieren
   };
 
-  void newEintrag (eintrag &eintr);
-
-private:
   vector<eintrag> _eintraege; // dynamisch erweiterbares Array der Einträge
+  Klient _klient;
+  Mitarbeiter _mitarbeiter;
+
+  void dokuLaden();
+  void dokuSpeichern();
 };
 
 // TODO wesentliche Frage: in welchem Umfang sollen Einträge geändert oder gelöscht werden können?
