@@ -7,6 +7,7 @@
 //#include "pugixml.hpp"
 #include <QFile>
 #include <QDir>
+#include <QtXmlPatterns>
 
 /*
 #include "personen/person.h"
@@ -27,14 +28,26 @@
 class DateiHandling
 {
 public:
-  DateiHandling();
+  enum class kategorie
+  {
+    klient,
+    mitarbeiter,
+    doku,
+    ihp
+  };
+
+  /*
+   * Konstruktor für Personen
+   */
+  DateiHandling(QString ID, kategorie k);
 
 
   /*
    * Personen
    */
-  QString ladeFeldKlient(QString ID, QString feld);
-  QString ladeFeldMitarbeiter(QString ID, QString feld);
+  QString ladeFeldPerson(QString feld);
+
+  void speichereFeldPerson(QString feld);
 
   /*
    * Dokumentation
@@ -46,9 +59,12 @@ public:
 
 
 private:
-  QString ladeFeldPerson(QString person, QString ID, QString feld);
-  QString _pfadDaten = "../testdaten";
-
+  QString _pfadDaten = "../testdaten"; // TODO Pfad aus config
+  QString _ID;
+  QString _verzeichnis;
+  QString _root;
+  kategorie _kat;
+  QXmlQuery _query;
 };
 
 #endif // DATEIHANDLING_H

@@ -44,6 +44,11 @@ public:
   const adresse getAdresse1();
   const QDate getGeburtsdatum();
 
+  /*
+   * GUI
+   */
+  void zeigeFenster();
+
 
 protected:
   QString _ID;

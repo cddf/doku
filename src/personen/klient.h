@@ -15,6 +15,7 @@ public:
   ~Klient();
 
   void ladeKlient();
+  void speichereKlient();
 };
 
 #endif // KLIENT_H

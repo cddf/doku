@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<eintrag>
-    <revision>
-        <timestamp>Zeit</timestamp>
-        <kommentar>Kommentar</kommentar>
-        <mitarbeiter>MitarbeiterID</mitarbeiter>
-    </revision>
-    <revision>
-        Korrektur
-    </revision>
-</eintrag>
+<doku>
+    <eintrag>
+        <revision>
+            <timestamp>Zeit</timestamp>
+            <kommentar>Kommentar</kommentar>
+            <mitarbeiter>MitarbeiterID</mitarbeiter>
+        </revision>
+        <revision>
+            Korrektur
+        </revision>
+    </eintrag>
+</doku>

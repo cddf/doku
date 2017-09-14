@@ -21,16 +21,20 @@ Klient::~Klient()
 
 void Klient::ladeKlient()
 {
-  DateiHandling d;
-  _vorname = d.ladeFeldKlient(_ID,"vorname");
-  _nachname = d.ladeFeldKlient(_ID,"nachname");
+  DateiHandling d(_ID, DateiHandling::kategorie::klient);
+  _vorname = d.ladeFeldPerson("vorname");
+  _nachname = d.ladeFeldPerson("nachname");
   _geburtsdatum = QDate::fromString(
-         d.ladeFeldKlient(_ID,"geburtsdatum"),"yyyy-MM-dd");
+         d.ladeFeldPerson("geburtsdatum"),"yyyy-MM-dd");
 
-  _adresse1.zeile2 = d.ladeFeldKlient(_ID,"adresse/zeile2");
-  _adresse1.strasse = d.ladeFeldKlient(_ID,"adresse/strasse");
-  _adresse1.plz = d.ladeFeldKlient(_ID,"adresse/plz").toUShort();
-  _adresse1.ort = d.ladeFeldKlient(_ID,"adresse/ort");
-  _adresse1.land = d.ladeFeldKlient(_ID,"adresse/land");
-  _adresse1.kommentar = d.ladeFeldKlient(_ID,"adresse/kommentar");
+  _adresse1.zeile2 = d.ladeFeldPerson("adresse/zeile2");
+  _adresse1.strasse = d.ladeFeldPerson("adresse/strasse");
+  _adresse1.plz = d.ladeFeldPerson("adresse/plz").toUShort();
+  _adresse1.ort = d.ladeFeldPerson("adresse/ort");
+  _adresse1.land = d.ladeFeldPerson("adresse/land");
+  _adresse1.kommentar = d.ladeFeldPerson("adresse/kommentar");
+}
+
+void Klient::speichereKlient()
+{
 }
