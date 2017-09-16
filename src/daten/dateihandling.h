@@ -39,15 +39,15 @@ public:
   /*
    * Konstruktor für Personen
    */
-  DateiHandling(QString ID, kategorie k);
+  DateiHandling(const QString ID, const kategorie k);
 
 
   /*
    * Personen
    */
-  QString ladeFeldPerson(QString feld);
+  QString ladeFeldPerson(const QString feld);
 
-  void speichereFeldPerson(QString feld);
+  void speichereFeldPerson(const QString feld);
 
   /*
    * Dokumentation

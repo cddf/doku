@@ -1,11 +1,10 @@
 #include "dateihandling.h"
 #include <iostream>
-#include <QtXmlPatterns>
 #include <QFile>
 #include <QDir>
-#include <QXmlFormatter>
+#include <QDomDocument>
 
-DateiHandling::DateiHandling(QString ID, kategorie k)
+DateiHandling::DateiHandling(const QString ID, const kategorie k)
   : _ID(ID), _kat(k)
 {
   switch (_kat) {
@@ -29,7 +28,7 @@ DateiHandling::DateiHandling(QString ID, kategorie k)
 }
 
 
-QString DateiHandling::ladeFeldPerson(QString feld)
+QString DateiHandling::ladeFeldPerson(const QString feld)
 {
 
   const QString queryUrl = QString("doc('%1/%2/%3/stammdaten.xml')//%4/%5/string()")
@@ -45,28 +44,19 @@ QString DateiHandling::ladeFeldPerson(QString feld)
   return antwort.trimmed();
 }
 
-/*
-void DateiHandling::speichereFeldPerson(QString feld)
+void DateiHandling::speichereFeldPerson(const QString feld)
 {
-  QString root;
+  QDomDocument doc("xml");
 
-  if(person == "Klienten")
-    root = "klient";
-  else if (person == "Mitarbeiter")
-    root = "mitarbeiter";
+  QDomElement root = doc.createElement("klient");
+  doc.appendChild(root);
 
-  const QString queryStr = QString("doc('%1/%2/%3/stammdaten.xml')//%4/%5/string()")
-      .arg(_pfadDaten)
-      .arg(person)
-      .arg(_ID)
-      .arg(root)
-      .arg(feld);
+  QDomElement tag = doc.createElement("Greeting");
+  root.appendChild(tag);
 
-  _query.setQuery(queryStr);
+  QDomText t = doc.createTextNode("Hello World");
+  tag.appendChild(t);
 
-  /*
-  QXmlFormatter formatter(query, myOutputDevice);
-  formatter.setIndentationDepth(2);
-  _query.evaluateTo(&formatter);
+  QString xml = doc.toString();
+  std::cout << xml.toStdString();
 }
-  */

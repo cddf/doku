@@ -5,6 +5,7 @@
 #include <QDate>
 #include "personen/person.h"
 #include "personen/klient.h"
+#include "daten/dateihandling.h"
 #include <iostream>
 #include <typeinfo>
 
@@ -32,6 +33,9 @@ int main(int argc, char *argv[])
   std::cout << "vorname: " << k.getVorname().toStdString() << std::endl;
   std::cout << "nachname: " << k.getNachname().toStdString() << std::endl;
   std::cout << "geburtstag: " << k.getGeburtsdatum().toString("dd.MM.yyyy").toStdString() << std::endl;
+
+  DateiHandling d("test", DateiHandling::kategorie::klient);
+  d.speichereFeldPerson("egal");
 
   //return a.exec();
   return 0;
